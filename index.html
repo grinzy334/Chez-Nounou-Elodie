@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chez Nounou Élodie – Assistante Maternelle Agréée à Laroque (33410)</title>
-<meta name="description" content="Assistante maternelle agréée et ancienne ATSEM à Laroque (33410). 2 places disponibles. Préparation douce à l’école maternelle avec P’tit Loup, à côté de Cadillac.">
+<meta name="description" content="Assistante maternelle agréée et ancienne ATSEM à Laroque (33410). 2 places disponibles. Accès facile depuis Bordeaux, Langon et Cadillac par la D10, la D1113 et la D11.">
 <meta name="theme-color" content="#1f5fbf">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -13,17 +13,24 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐺%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ChildCare",
   "name": "Chez Nounou Élodie",
-  "description": "Assistante maternelle agréée et ancienne ATSEM à Laroque, en Gironde.",
+  "description": "Assistante Maternelle Agréée à Laroque (33410). Accueil familial et bienveillant, ancienne ATSEM, facile d’accès depuis Bordeaux, Langon et Cadillac.",
   "telephone": "+33667856837",
-  "address": {"@type":"PostalAddress","addressLocality":"Laroque","postalCode":"33410","addressRegion":"Gironde","addressCountry":"FR"},
-  "areaServed": ["Laroque","Cadillac","Béguey","Loupiac","Omet","Podensac","Rions","Cardan","Capian","Donzac","Monprimblanc","Gabarnac","Semens","Mourens"]
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Laroque%2C%2033410%2C%20France",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Laroque",
+    "postalCode": "33410",
+    "addressRegion": "Gironde",
+    "addressCountry": "FR"
+  },
+  "areaServed": ["Laroque","Cadillac","Béguey","Loupiac","Omet","Donzac","Gabarnac","Semens","Mourens","Monprimblanc","Sainte-Croix-du-Mont","Podensac","Cérons","Illats","Barsac","Rions","Cardan","Capian"]
 }
 </script>
 
@@ -39,20 +46,28 @@ h1,h2,h3{font-family:'Fredoka','Segoe UI',Tahoma,sans-serif;font-weight:600;line
 
 /* HERO */
 .hero{background:linear-gradient(180deg,#d6e9fb 0%,var(--sky) 55%,#eaf5ec 100%);padding:44px 20px 0;text-align:center;overflow:hidden}
-.hero-inner{max-width:720px;margin:0 auto}
-.hero h1{font-size:clamp(1.9rem,6vw,2.9rem);color:var(--blue-dark);margin-bottom:14px}
-.hero .intro{font-size:1.15rem;margin:0 auto 22px;max-width:60ch}
-.badge{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:700;padding:8px 18px;border-radius:999px;margin-bottom:24px}
+.hero-inner{max-width:760px;margin:0 auto}
+.hero h1{font-size:clamp(1.9rem,6vw,2.9rem);color:var(--blue-dark);margin-bottom:16px}
+.badge{display:inline-block;background:var(--sun);color:#3a2a00;font-weight:700;padding:8px 18px;border-radius:999px;margin:0 0 18px}
+.hero .intro{font-size:1.15rem;margin:0 auto 24px;max-width:60ch}
 .btn{display:inline-block;background:var(--blue);color:#fff;font-weight:700;font-size:1.2rem;text-decoration:none;padding:15px 30px;border-radius:999px;box-shadow:0 8px 18px -8px rgba(31,95,191,.6);transition:background .15s,transform .15s}
 .btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
-.btn:focus-visible,.callbar a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.btn:focus-visible,.tab:focus-visible,.callbar a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+/* ONGLETS (animation) */
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:28px auto 0}
+.tab{font:700 .88rem/1.25 'Nunito Sans','Segoe UI',sans-serif;border:2px solid var(--blue);background:#fff;color:var(--blue-dark);border-radius:12px;padding:10px 8px;cursor:pointer;transition:background .15s,color .15s}
+.tab:nth-child(5){grid-column:1/-1}
+.tab[aria-pressed="true"]{background:var(--blue);color:#fff}
+.route-note{margin:14px auto 0;max-width:680px;font-weight:600;color:var(--blue-dark);min-height:3.3em}
 
 /* SCENE */
-.scene{display:block;width:calc(100% + 40px);margin:18px -20px 0;height:clamp(190px,38vw,300px)}
+.scene-wrap{margin:6px -20px 0;background:linear-gradient(to top,#a9d6b4 0 17.14%,#cfe8d4 17.14% 28.57%,transparent 28.57%)}
+.scene{display:block;width:100%;max-width:760px;height:auto;margin:0 auto}
 .cloud{fill:#fff;opacity:.92}
 .c1{animation:drift 55s ease-in-out infinite alternate}
 .c2{animation:drift 80s ease-in-out infinite alternate-reverse}
-@keyframes drift{from{transform:translateX(-60px)}to{transform:translateX(300px)}}
+@keyframes drift{from{transform:translateX(-30px)}to{transform:translateX(190px)}}
 .halo{transform-box:fill-box;transform-origin:center;animation:halo 4s ease-in-out infinite}
 @keyframes halo{50%{transform:scale(1.18);opacity:.2}}
 .wolf{animation:bob 3s ease-in-out infinite}
@@ -62,6 +77,8 @@ h1,h2,h3{font-family:'Fredoka','Segoe UI',Tahoma,sans-serif;font-weight:600;line
 @keyframes float{50%{transform:translateY(-9px)}}
 .eye{transform-box:fill-box;transform-origin:center;animation:blink 5s infinite}
 @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+.sign text{font:800 17px 'Nunito Sans','Segoe UI',sans-serif;text-anchor:middle;fill:#1b2a41;letter-spacing:.4px}
+#pl text{font:800 14px 'Nunito Sans','Segoe UI',sans-serif;text-anchor:middle;fill:#1b2a41}
 
 /* CONTENT */
 main{max-width:760px;margin:24px auto 0;padding:0 16px}
@@ -80,6 +97,29 @@ section p:last-child{margin-bottom:0}
 .sector{border-left:4px solid var(--blue);padding:4px 0 4px 16px}
 .sector h3{font-size:1.1rem;margin-bottom:4px}
 .sector p{margin:0;color:var(--muted)}
+
+/* AXES D'ACCÈS (texte SEO visible) */
+.axes{display:grid;gap:14px;margin-top:18px}
+.axe{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:10px;padding:14px 16px}
+.axe h3{font-size:1.05rem;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.badge-route{background:#e1f0fb;color:var(--blue-dark);font:700 .75rem 'Nunito Sans',sans-serif;padding:3px 10px;border-radius:12px}
+.route{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;line-height:1.9;color:var(--ink)}
+.route li{font-weight:600}
+.route li::after{content:"➔";color:var(--blue);font-weight:800;margin:0 8px}
+.route.around li::after{content:"•"}
+.route li:last-child::after{content:none}
+.route small{font-weight:400;font-style:italic;font-size:.8rem;color:#7a8799}
+.route .bridge{color:var(--blue)}
+.route .dest{font-weight:800;color:#1e7a4a;background:#e3f4ea;padding:0 8px;border-radius:6px}
+
+/* CARTE (chargée au clic) */
+.map{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden;border:2px solid var(--line);background:var(--sky)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:20px;text-align:center;background:linear-gradient(135deg,var(--sky),var(--sage))}
+.map-ph p{margin:0;max-width:44ch;color:var(--muted);font-size:.95rem}
+.map-ph .btn{border:0;cursor:pointer;font-family:inherit}
+.tip{margin:16px 0 14px;color:var(--muted);font-size:.97rem}
+.map-cta{text-align:center}
 
 .daily{list-style:none;padding:0;margin:0;display:grid;gap:14px}
 .daily li{display:flex;gap:14px;align-items:flex-start;padding:14px;border-radius:12px}
@@ -103,6 +143,10 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
   body{padding-bottom:0}
   .callbar{display:none}
   section{padding:34px 36px}
+  .tabs{grid-template-columns:repeat(5,1fr)}
+  .tab:nth-child(5){grid-column:auto}
+  .tab{font-size:.82rem}
+  .map{aspect-ratio:16/9}
   .daily{grid-template-columns:repeat(3,1fr)}
   .daily li{flex-direction:column}
 }
@@ -131,41 +175,61 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
 <header class="hero">
   <div class="hero-inner">
     <h1>Chez Nounou Élodie – Assistante Maternelle Agréée à Laroque (33410)</h1>
+    <span class="badge">2 places disponibles immédiatement</span>
     <p class="intro">Bienvenue dans le cocon de Nounou Élodie, un espace d’accueil familial, bienveillant et sécurisé situé à Laroque, en Gironde. J’accompagne vos enfants au quotidien dans leur épanouissement, leur motricité et la découverte du monde qui les entoure.</p>
-    <span class="badge">2 places disponibles immédiatement</span><br>
     <a class="btn" href="tel:+33667856837">Appeler Élodie : 06 67 85 68 37</a>
+
+    <div class="tabs" role="group" aria-label="Choisir son itinéraire pour venir à Laroque">
+      <button class="tab" type="button" aria-pressed="true">Bordeaux – Rive gauche (D1113)</button>
+      <button class="tab" type="button" aria-pressed="false">Langon – Rive gauche (D1113)</button>
+      <button class="tab" type="button" aria-pressed="false">Bordeaux – Rive droite (D10)</button>
+      <button class="tab" type="button" aria-pressed="false">Langon – Rive droite (D10)</button>
+      <button class="tab" type="button" aria-pressed="false">Communes autour (D120 / D11)</button>
+    </div>
+    <p class="route-note" id="note" aria-live="polite">Bordeaux → Portets → Arbanats → Virelade → Podensac → Cérons → Pont de Cadillac → Cadillac → Laroque</p>
   </div>
 
-  <svg class="scene" id="scene" viewBox="0 0 800 280" preserveAspectRatio="xMaxYMax slice" role="img" aria-label="Une voiture arrive à la maison de Nounou Élodie, où P’tit Loup accueille les enfants">
-    <circle class="halo" cx="690" cy="52" r="40" fill="#f6c453" opacity=".35"/>
-    <circle cx="690" cy="52" r="26" fill="#f6c453"/>
-    <g class="cloud c1"><ellipse cx="120" cy="60" rx="38" ry="16"/><ellipse cx="150" cy="50" rx="28" ry="16"/><ellipse cx="95" cy="52" rx="24" ry="13"/></g>
-    <g class="cloud c2"><ellipse cx="300" cy="105" rx="34" ry="14"/><ellipse cx="326" cy="97" rx="24" ry="14"/><ellipse cx="278" cy="98" rx="20" ry="11"/></g>
+  <div class="scene-wrap">
+  <svg class="scene" id="scene" viewBox="0 0 520 280" role="img" aria-label="Animation : une voiture rejoint Laroque, chez Nounou Élodie, en passant par les panneaux des communes de l’axe choisi">
+    <circle class="halo" cx="465" cy="50" r="36" fill="#f6c453" opacity=".35"/>
+    <circle cx="465" cy="50" r="24" fill="#f6c453"/>
+    <g class="cloud c1"><ellipse cx="70" cy="58" rx="34" ry="14"/><ellipse cx="96" cy="49" rx="24" ry="14"/><ellipse cx="48" cy="51" rx="20" ry="11"/></g>
+    <g class="cloud c2"><ellipse cx="200" cy="100" rx="30" ry="12"/><ellipse cx="224" cy="93" rx="22" ry="12"/><ellipse cx="180" cy="94" rx="17" ry="10"/></g>
 
-    <path d="M0 200Q200 150 420 195T800 180V280H0Z" fill="#cfe8d4"/>
-    <path d="M0 235Q250 205 500 232T800 222V280H0Z" fill="#a9d6b4"/>
+    <path d="M0 200Q130 168 260 190T520 200V280H0Z" fill="#cfe8d4"/>
+    <path d="M0 232Q130 212 260 228T520 232V280H0Z" fill="#a9d6b4"/>
 
-    <path id="road" d="M-20 262C150 262 220 240 330 246S520 262 612 258" fill="none" stroke="#6b7a90" stroke-width="14" stroke-linecap="round"/>
-    <path d="M-20 262C150 262 220 240 330 246S520 262 612 258" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 12" opacity=".8"/>
+    <!-- Garonne (rive gauche uniquement) -->
+    <path id="river" d="M-21 226Q-1 254 -15 280H29Q43 254 23 226Z" fill="#8ec5f0" style="display:none"/>
+
+    <path id="road" d="M-20 266C60 266 120 250 200 254S320 262 384 258" fill="none" stroke="#6b7a90" stroke-width="14" stroke-linecap="round"/>
+    <path id="dash" d="M-20 266C60 266 120 250 200 254S320 262 384 258" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 12" opacity=".8"/>
+    <g id="bridge" style="display:none"><rect x="-38" y="245" width="76" height="18" fill="#7d8ba0" stroke="#3d4b61" stroke-width="2"/><path d="M-38 254H38" stroke="#fff" stroke-width="2" stroke-dasharray="8 8"/></g>
+
+    <!-- plaque du numéro de route -->
+    <g id="pl" transform="translate(30 246)" aria-hidden="true"><rect x="-2" y="-54" width="4" height="54" fill="#6b7a90"/><rect x="-27" y="-82" width="54" height="28" rx="6" fill="#f6c453" stroke="#1b2a41" stroke-width="2"/><text id="plq" y="-63">D1113</text></g>
 
     <!-- maison -->
-    <rect x="688" y="176" width="12" height="24" fill="#17488f"/>
-    <rect x="620" y="205" width="86" height="54" fill="#fff" stroke="#cfdbe6" stroke-width="2"/>
-    <polygon points="610,208 663,168 716,208" fill="#1f5fbf"/>
-    <path d="M663 200c-8-7-12-12-6-16 3-2 6 0 6 3 0-3 3-5 6-3 6 4 2 9-6 16z" fill="#f3b8c0"/>
-    <rect x="652" y="224" width="22" height="35" rx="3" fill="#f6c453"/>
-    <rect x="630" y="222" width="16" height="16" fill="#e4f0fc" stroke="#cfdbe6"/>
-    <rect x="684" y="222" width="16" height="16" fill="#e4f0fc" stroke="#cfdbe6"/>
+    <rect x="458" y="176" width="12" height="24" fill="#17488f"/>
+    <rect x="390" y="205" width="86" height="54" fill="#fff" stroke="#cfdbe6" stroke-width="2"/>
+    <polygon points="380,208 433,168 486,208" fill="#1f5fbf"/>
+    <path d="M433 200c-8-7-12-12-6-16 3-2 6 0 6 3 0-3 3-5 6-3 6 4 2 9-6 16z" fill="#f3b8c0"/>
+    <rect x="422" y="224" width="22" height="35" rx="3" fill="#f6c453"/>
+    <rect x="400" y="222" width="16" height="16" fill="#e4f0fc" stroke="#cfdbe6"/>
+    <rect x="454" y="222" width="16" height="16" fill="#e4f0fc" stroke="#cfdbe6"/>
 
     <!-- ballons -->
-    <g class="balloon"><path d="M742 136Q736 170 716 204" stroke="#6b7a90" fill="none"/><ellipse cx="742" cy="122" rx="12" ry="15" fill="#f3b8c0"/></g>
-    <g class="balloon b2"><path d="M764 148Q752 176 716 204" stroke="#6b7a90" fill="none"/><ellipse cx="764" cy="134" rx="12" ry="15" fill="#f6c453"/></g>
+    <g class="balloon"><path d="M496 133Q492 170 486 204" stroke="#6b7a90" fill="none"/><ellipse cx="496" cy="118" rx="12" ry="15" fill="#f3b8c0"/></g>
+    <g class="balloon b2"><path d="M506 148Q500 176 486 204" stroke="#6b7a90" fill="none"/><ellipse cx="506" cy="134" rx="12" ry="15" fill="#f6c453"/></g>
+
+    <!-- panneaux d'agglomération (générés selon l'onglet) -->
+    <g id="signs" aria-hidden="true"></g>
 
     <!-- P'tit Loup -->
-    <use class="wolf" href="#wolf" x="500" y="158" width="80" height="80"/>
+    <use class="wolf" href="#wolf" x="318" y="174" width="64" height="64"/>
 
     <!-- voiture -->
-    <g>
+    <g id="car" style="opacity:0">
       <g transform="translate(-22,-25)">
         <rect x="0" y="10" width="44" height="14" rx="5" fill="#1f5fbf"/>
         <path d="M10 10L16 0H30L36 10Z" fill="#1f5fbf"/>
@@ -174,10 +238,9 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
         <circle cx="11" cy="25" r="5" fill="#1b2a41"/><circle cx="34" cy="25" r="5" fill="#1b2a41"/>
         <circle cx="44" cy="16" r="2" fill="#f6c453"/>
       </g>
-      <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" calcMode="linear" keyTimes="0;0.85;1" keyPoints="0;1;1"><mpath href="#road"/></animateMotion>
-      <animate attributeName="opacity" dur="10s" repeatCount="indefinite" values="0;1;1;0" keyTimes="0;0.05;0.9;1"/>
     </g>
   </svg>
+  </div>
 </header>
 
 <main>
@@ -210,6 +273,64 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
     </div>
   </section>
 
+  <section id="zones-accueil">
+    <h2><span class="ico" aria-hidden="true">🛣️</span>Les axes pour venir chez Nounou Élodie</h2>
+    <p>Que vous travailliez vers <strong>Bordeaux</strong> ou <strong>Langon</strong>, mon domicile à <strong>Laroque (33410)</strong> est le point central de vos trajets quotidiens sur la rive droite et la rive gauche de la Garonne.</p>
+    <div class="axes">
+      <div class="axe">
+        <h3>🚗 Depuis Bordeaux, rive gauche <span class="badge-route">A62 / D1113</span></h3>
+        <ol class="route">
+          <li>Bordeaux</li><li>Portets</li><li>Arbanats</li><li>Virelade</li><li>Podensac</li>
+          <li>Cérons <small>(proche Landiras &amp; Illats)</small></li>
+          <li class="bridge">🌉 Pont de Cadillac</li><li>Cadillac</li><li class="dest">📍 Laroque</li>
+        </ol>
+      </div>
+      <div class="axe">
+        <h3>🚗 Depuis Langon, rive gauche <span class="badge-route">D1113</span></h3>
+        <ol class="route">
+          <li>Langon</li><li>Toulenne</li><li>Preignac</li><li>Barsac</li><li>Cérons</li>
+          <li class="bridge">🌉 Pont de Cadillac</li><li>Cadillac</li><li class="dest">📍 Laroque</li>
+        </ol>
+      </div>
+      <div class="axe">
+        <h3>🚗 Depuis Bordeaux, rive droite <span class="badge-route">D10</span></h3>
+        <ol class="route">
+          <li>Bordeaux</li><li>Latresne</li><li>Baurech</li><li>Langoiran</li><li>Lestiac-sur-Garonne</li>
+          <li>Paillet</li><li>Rions</li><li>Béguey</li><li>Cadillac</li><li class="dest">📍 Laroque</li>
+        </ol>
+      </div>
+      <div class="axe">
+        <h3>🚗 Depuis Langon et le sud, rive droite <span class="badge-route">D10</span></h3>
+        <ol class="route">
+          <li>Langon</li><li>Saint-Macaire</li><li>Saint-Maixant</li><li>Verdelais</li><li>Sainte-Croix-du-Mont</li>
+          <li>Loupiac</li><li>Cadillac</li><li class="dest">📍 Laroque</li>
+        </ol>
+      </div>
+      <div class="axe">
+        <h3>🏡 Communes de proximité &amp; coteaux <span class="badge-route">D120 / D11</span></h3>
+        <ul class="route around" style="list-style:none">
+          <li>Créon</li><li>Targon</li><li>Cardan</li><li>Capian</li><li>Omet</li><li>Donzac</li>
+          <li>Gabarnac</li><li>Semens</li><li>Mourens</li><li>Monprimblanc</li><li class="dest">📍 Laroque</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="carte-localisation">
+    <h2><span class="ico" aria-hidden="true">🗺️</span>Visualisez votre trajet vers mon accueil à Laroque</h2>
+    <div class="map" id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11351.783984812824!2d-0.3136652747923108!3d44.65945499999387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5514d438a4a055%3A0x40665174816e2b0!2s33410%20Laroque!5e0!3m2!1sfr!2sfr!4v1793632386472!5m2!1sfr!2sfr"
+        title="Carte Google Maps : Laroque (33410)"
+        allowfullscreen
+        loading="eager"
+        referrerpolicy="strict-origin-when-cross-origin">
+      </iframe>
+    </div>
+    <p class="tip">💡 <strong>Astuce parents :</strong> calculez directement votre temps de trajet en voiture depuis votre domicile ou votre lieu de travail (Bordeaux, Langon ou communes alentours).</p>
+    <p class="map-cta"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Laroque%2C%2033410%2C%20France" target="_blank" rel="noopener">Calculer mon trajet</a></p>
+  </section>
+
   <section>
     <h2><span class="ico" aria-hidden="true">🎨</span>Le quotidien à l’accueil : éveil, sorties et respect du rythme de chaque enfant</h2>
     <ul class="daily">
@@ -234,11 +355,75 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
 
 <script>
 (function(){
-  var s=document.getElementById('scene');
-  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches&&s.pauseAnimations){
-    s.setCurrentTime(8.7);s.pauseAnimations();
+  var NS='http://www.w3.org/2000/svg',PONT='Pont de Cadillac';
+  var R=[
+    {n:'D1113',r:1,p:'M-20 266C60 266 120 250 200 254S320 262 384 258',s:['Bordeaux','Portets','Arbanats','Virelade','Podensac','Cérons',PONT,'Cadillac']},
+    {n:'D1113',r:1,p:'M-20 262C60 262 130 250 210 254S320 260 384 258',s:['Langon','Toulenne','Preignac','Barsac','Cérons',PONT,'Cadillac']},
+    {n:'D10',p:'M-20 262C60 250 130 262 210 252S320 252 384 258',s:['Bordeaux','Latresne','Baurech','Langoiran','Lestiac','Paillet','Rions','Béguey','Cadillac']},
+    {n:'D10',p:'M-20 258C70 270 140 244 220 256S330 266 384 258',s:['Langon','Saint-Macaire','Saint-Maixant','Verdelais','Sainte-Croix-du-Mont','Loupiac','Cadillac']},
+    {n:'D120',p:'M-20 264C80 256 150 268 230 258S330 254 384 258',s:['Créon','Targon','Cardan','Capian','Omet','Donzac','Gabarnac','Semens','Mourens','Monprimblanc']}
+  ];
+  var $=function(id){return document.getElementById(id)};
+  var road=$('road'),dash=$('dash'),signsG=$('signs'),car=$('car'),plq=$('plq'),river=$('river'),bridge=$('bridge'),note=$('note');
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cur=0,manual=false,t0=0,L=0,T=0,sg=[];
+
+  function fit(o){
+    var tx=o.g.querySelector('text'),b=o.g.querySelector('.b');
+    var w=Math.max(92,tx.getComputedTextLength()+30);
+    b.setAttribute('x',-w/2);b.setAttribute('width',w);
+    o.g.setAttribute('transform','translate('+Math.min(Math.max(o.x,w/2+6),514-w/2)+' 238)');
   }
+
+  function setRoute(i,byUser){
+    cur=i;if(byUser)manual=true;
+    var r=R[i],names=r.s.concat('Laroque');
+    road.setAttribute('d',r.p);dash.setAttribute('d',r.p);
+    L=road.getTotalLength();T=1.5*names.length;
+    plq.textContent=r.n;
+    river.style.display=bridge.style.display=r.r?'':'none';
+    note.textContent=names.join(' → ');
+    tabs.forEach(function(b,k){b.setAttribute('aria-pressed',k===i?'true':'false')});
+    signsG.textContent='';
+    sg=names.map(function(nm,k){
+      var f=(k+.5)/names.length,pt=road.getPointAtLength(L*f);
+      var g=document.createElementNS(NS,'g');g.setAttribute('class','sign');
+      g.innerHTML='<g transform="scale(.01)"><rect x="-3" y="-98" width="6" height="98" fill="#6b7a90"/><rect class="b" y="-142" height="44" rx="6" fill="#fff" stroke="#d62828" stroke-width="5"/><text y="-114">'+nm.toUpperCase()+'</text></g>';
+      signsG.appendChild(g);
+      var o={g:g,s:g.firstChild,x:pt.x,t:f*T,nm:nm};fit(o);return o;
+    });
+    var pb=sg.filter(function(o){return o.nm===PONT})[0];
+    if(pb&&r.r){var tr='translate('+pb.x+' 0)';river.setAttribute('transform',tr);bridge.setAttribute('transform',tr)}
+    if(reduce){draw(T+.5)}else{t0=performance.now()}
+  }
+
+  function draw(t){
+    t=Math.max(t,0);
+    var p=Math.min(t/T,1),l=L*p,a=road.getPointAtLength(l),b=road.getPointAtLength(Math.min(l+2,L));
+    car.setAttribute('transform','translate('+a.x+' '+a.y+') rotate('+Math.atan2(b.y-a.y,b.x-a.x)*57.3+')');
+    var end=T+2.2,fade=t>end?Math.max(0,1-(t-end)/.5):1;
+    car.style.opacity=Math.min(t/.4,1,fade);signsG.style.opacity=fade;
+    var c=-1;sg.forEach(function(o,k){if(t>=o.t)c=k});
+    sg.forEach(function(o,k){
+      var s=.01;
+      if(k===c){var u=Math.min((t-o.t)/.35,1)-1;s=Math.max(.01,1+2.70158*u*u*u+1.70158*u*u)}
+      o.s.setAttribute('transform','scale('+s+')');
+    });
+  }
+
+  function loop(now){
+    var t=(now-t0)/1000;draw(t);
+    if(t>T+2.7){if(!manual){setRoute((cur+1)%R.length,false)}else{t0=now}}
+    requestAnimationFrame(loop);
+  }
+
+  tabs.forEach(function(b,i){b.addEventListener('click',function(){setRoute(i,true)})});
+  setRoute(0,false);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){sg.forEach(fit)})}
+  if(!reduce){requestAnimationFrame(loop)}
 })();
 </script>
+
 </body>
 </html>
