@@ -319,13 +319,10 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
   <section id="carte-localisation">
     <h2><span class="ico" aria-hidden="true">🗺️</span>Visualisez votre trajet vers mon accueil à Laroque</h2>
     <div class="map" id="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11351.783984812824!2d-0.3136652747923108!3d44.65945499999387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5514d438a4a055%3A0x40665174816e2b0!2s33410%20Laroque!5e0!3m2!1sfr!2sfr!4v1793632386472!5m2!1sfr!2sfr"
-        title="Carte Google Maps : Laroque (33410)"
-        allowfullscreen
-        loading="eager"
-        referrerpolicy="strict-origin-when-cross-origin">
-      </iframe>
+      <div class="map-ph">
+        <p>La carte Google Maps ne se charge que si vous cliquez (Google peut alors déposer des cookies).</p>
+        <button class="btn" type="button" id="mapbtn">Afficher la carte</button>
+      </div>
     </div>
     <p class="tip">💡 <strong>Astuce parents :</strong> calculez directement votre temps de trajet en voiture depuis votre domicile ou votre lieu de travail (Bordeaux, Langon ou communes alentours).</p>
     <p class="map-cta"><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Laroque%2C%2033410%2C%20France" target="_blank" rel="noopener">Calculer mon trajet</a></p>
@@ -424,6 +421,17 @@ footer{text-align:center;padding:12px 20px 28px;color:var(--muted);font-size:.92
   if(!reduce){requestAnimationFrame(loop)}
 })();
 </script>
-
+<script>
+(function(){
+  var b=document.getElementById('mapbtn');if(!b)return;
+  b.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.google.com/maps?q=Laroque%2C+33410%2C+Gironde&hl=fr&output=embed';
+    f.title='Carte Google Maps : Laroque (33410)';
+    f.loading='lazy';f.allowFullscreen=true;f.referrerPolicy='no-referrer-when-downgrade';
+    var m=document.getElementById('map');m.textContent='';m.appendChild(f);
+  });
+})();
+</script>
 </body>
 </html>
